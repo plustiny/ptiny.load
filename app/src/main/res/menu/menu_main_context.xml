@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/cmenu_restart"
+        android:title="@string/cmenu_restart" />
+    <item
+        android:id="@+id/cmenu_cancel"
+        android:title="@string/cmenu_cancel" />
+    <item
+        android:id="@+id/cmenu_delete"
+        android:title="@string/cmenu_delete" />
+    <item
+        android:id="@+id/cmenu_delete_finished"
+        android:title="@string/cmenu_delete_finished" />
+    <item
+        android:id="@+id/cmenu_delete_terminated"
+        android:title="@string/cmenu_delete_terminated" />
+    <item
+        android:id="@+id/cmenu_delete_all"
+        android:title="@string/cmenu_delete_all" />
+</menu>

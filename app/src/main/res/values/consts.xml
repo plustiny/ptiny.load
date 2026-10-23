@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name" translatable="false">+tinyload</string>
+
+    <string name="pref_metadata" translatable="false">metadata</string>
+    <string name="pref_scheme" translatable="false">scheme</string>
+    <string name="pref_address" translatable="false">address</string>
+    <string name="pref_port" translatable="false">port</string>
+    <string name="pref_user" translatable="false">user</string>
+    <string name="pref_pswd" translatable="false">pswd</string>
+    <string name="pref_theme" translatable="false">theme</string>
+    <string name="pref_refresh" translatable="false">refresh</string>
+    <string name="pref_debuglevel" translatable="false">debuglevel</string>
+    <string name="pref_timeout" translatable="false">timeout</string>
+</resources>
+

@@ -1,0 +1,57 @@
+<resources>
+    <string name="settings_title">Settings</string>
+    <string name="settings_about">About it ⤴</string>
+    <string name="settings_scheme">Scheme</string>
+    <string name="mode_https">https (highly recommended)</string>
+    <string name="mode_http">http   (passwords sent in plain text)</string>
+    <string name="settings_server">Server</string>
+    <string name="settings_address">Address</string>
+    <string name="settings_address_hint">foo.bar.com or 123.456.789.012</string>
+    <string name="settings_port">Port</string>
+    <string name="settings_port_hint">1881</string>
+
+    <string name="settings_login">Login</string>
+    <string name="settings_user">User</string>
+    <string name="settings_user_hint">foo</string>
+    <string name="settings_pswd">Password</string>
+    <string name="settings_pswd_hint">bar</string>
+
+    <string name="settings_others">Others</string>
+    <string name="settings_theme">Theme</string>
+    <string name="mode_dark">Dark</string>
+    <string name="mode_light">Light</string>
+    <string name="mode_system">Follow System</string>
+    <string name="settings_refresh">Refresh Rate [sec] (0 is off)</string>
+    <string name="settings_refresh_hint">10</string>
+    <string name="settings_debuglevel">Debug Level (effective after restart)</string>
+    <string name="settings_menu_commit">Save</string>
+    <string name="settings_timeout">Http timeout [sec]</string>
+
+    <string name="menu_filter">Filter</string>
+    <string name="menu_reload">Reload</string>
+    <string name="menu_settings">Settings</string>
+
+    <string name="cmenu_info">Info</string>
+    <string name="cmenu_restart">Restart it</string>
+    <string name="cmenu_cancel">Cancel it</string>
+    <string name="cmenu_delete">Remove from the queue</string>
+    <string name="cmenu_delete_finished">Remove finished</string>
+    <string name="cmenu_delete_terminated">Remove finished and failed </string>
+    <string name="cmenu_delete_all">Remove all</string>
+    
+    <string name="msg_settings_saved">Settings saved</string>
+    <string name="msg_no_jobs">No download jobs</string>
+    <string name="msg_not_found">No matching jobs found</string>
+    <string name="msg_copied">Copy this text</string>
+
+    <string name="err_url">ERROR! url is invalid.</string>
+    <string name="err_conn">ERROR! connection error. server down?</string>
+    <string name="err_settings_required">Needs Settings First</string>
+    <string name="err_settings">ERROR! at settings</string>
+    <string name="err_load">ERROR! at http get</string>
+    <string name="err_io">ERROR! IO error. Auth failed?</string> 
+    <string name="err_json">ERROR! at json</string>
+    <string name="err_no_metadata">ERROR! no metadata. please reload first.</string>
+    <string name="err_timeout">ERROR! The request timed out. Please check whether the server is down or the port is open.</string>
+
+</resources>

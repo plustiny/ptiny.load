@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/settings_title"
+            app:menu="@menu/menu_settings" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+    <!-- 設定項目 -->
+    <TextView
+        android:id="@+id/settings_about"
+        android:text="@string/settings_about"
+        android:drawableStart="@@android:drawable/ic_menu_info_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:autoSizeTextType="uniform"/>
+   
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:background="#808080" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_server"
+        android:paddingHorizontal="12dp" />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:background="#808080" />
+</LinearLayout>
+
+    <TextView android:text="@string/settings_scheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
+    <RadioGroup
+        android:id="@+id/radio_scheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RadioButton android:id="@+id/radio_https"
+        android:text="@string/mode_https"/>
+    <RadioButton android:id="@+id/radio_http"
+        android:text="@string/mode_http"/>
+    </RadioGroup>
+
+    <TextView android:text="@string/settings_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
+    <EditText
+        android:id="@+id/edit_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textUri"
+        android:hint="@string/settings_address_hint"/>
+
+    <TextView android:text="@string/settings_port"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
+    <EditText
+        android:id="@+id/edit_port"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="@string/settings_port_hint"/>
+
+
+<!-- <LinearLayout -->
+<!--     xmlns:android="http://schemas.android.com/apk/res/android" -->
+<!--     android:layout_width="match_parent" -->
+<!--     android:layout_height="wrap_content" -->
+<!--     android:orientation="horizontal" -->
+<!--     android:gravity="center_vertical"> -->
+<!--     <View -->
+<!--         android:layout_width="0dp" -->
+<!--         android:layout_height="1dp" -->
+<!--         android:layout_weight="1" -->
+<!--         android:background="#808080" /> -->
+<!--     <TextView -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:text="@string/settings_login" -->
+<!--         android:paddingHorizontal="12dp" /> -->
+<!--     <View -->
+<!--         android:layout_width="0dp" -->
+<!--         android:layout_height="1dp" -->
+<!--         android:layout_weight="1" -->
+<!--         android:background="#808080" /> -->
+<!-- </LinearLayout> -->
+
+
+    <TextView android:text="@string/settings_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
+    <EditText
+        android:id="@+id/edit_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="@string/settings_user_hint"/>
+
+    <TextView android:text="@string/settings_pswd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
+    <EditText
+        android:id="@+id/edit_pswd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="@string/settings_pswd_hint"/>
+ 
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:background="#808080" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_others"
+        android:paddingHorizontal="12dp" />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:background="#808080" />
+</LinearLayout>
+
+
+    <TextView android:text="@string/settings_theme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
+    <RadioGroup
+        android:id="@+id/radio_theme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RadioButton android:id="@+id/radio_light"
+        android:tag="1"
+        android:text="@string/mode_light"/>
+    <RadioButton android:id="@+id/radio_dark"
+        android:tag="2"
+        android:text="@string/mode_dark"/>
+    <RadioButton android:id="@+id/radio_system"
+        android:tag="-1"
+        android:text="@string/mode_system"/>
+    </RadioGroup>
+ 
+    <TextView android:text="@string/settings_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
+    <EditText
+        android:id="@+id/edit_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="@string/settings_refresh_hint"/>
+
+    <TextView android:text="@string/settings_timeout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
+    <EditText
+        android:id="@+id/edit_timeout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"/>
+
+    <TextView android:text="@string/settings_debuglevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
+    <Spinner
+            android:id="@+id/spinner_debuglevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

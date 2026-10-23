@@ -1,0 +1,58 @@
+<resources>
+    <string name="settings_title">設定</string>
+    <string name="settings_about">このアプリについて ⤴</string>
+    <string name="settings_scheme">スキーム</string>
+    <string name="mode_https">https（強く推奨）</string>
+    <string name="mode_http">http   （パスワードは平文で送信されます）</string>
+    <string name="settings_server">サーバー</string>
+    <string name="settings_address">アドレス</string>
+    <string name="settings_address_hint">foo.bar.com または 123.456.789.012</string>
+    <string name="settings_port">ポート</string>
+    <string name="settings_port_hint">1881</string>
+
+    <string name="settings_login">ログイン</string>
+    <string name="settings_user">ユーザー</string>
+    <string name="settings_user_hint">foo</string>
+    <string name="settings_pswd">パスワード</string>
+    <string name="settings_pswd_hint">bar</string>
+
+    <string name="settings_others">その他</string>
+    <string name="settings_theme">テーマ</string>
+    <string name="mode_dark">ダーク</string>
+    <string name="mode_light">ライト</string>
+    <string name="mode_system">システムに従う</string>
+    <string name="settings_refresh">更新間隔 [秒]（0で無効）</string>
+    <string name="settings_refresh_hint">10</string>
+    <string name="settings_debuglevel">デバッグレベル（再起動後に有効）</string>
+    <string name="settings_timeout">Httpタイムアウト [秒]</string>
+    
+    <string name="settings_menu_commit">保存</string>
+
+    <string name="menu_filter">フィルター</string>
+    <string name="menu_reload">再読み込み</string>
+    <string name="menu_settings">設定</string>
+
+    <string name="cmenu_info">Info</string>
+    <string name="cmenu_restart">再起動</string>
+    <string name="cmenu_cancel">キャンセル</string>
+    <string name="cmenu_delete">削除</string>
+    <string name="cmenu_delete_finished">完了を削除</string>
+    <string name="cmenu_delete_terminated">完了・失敗を削除</string>
+    <string name="cmenu_delete_all">すべて削除</string>
+    
+    <string name="msg_settings_saved">設定を保存しました</string>
+    <string name="msg_no_jobs">ダウンロードはありません</string>
+    <string name="msg_not_found">マッチするダウンロードはありません</string>
+    <string name="msg_copied">テキストをコピーしました</string>
+
+    <string name="err_url">エラー！URLが不正です。</string>
+    <string name="err_conn">http(s) 接続エラー。サーバーが停止しているかもしれません。</string>
+    <string name="err_settings_required">先に設定が必要です</string>
+    <string name="err_settings">エラー！設定に問題があります</string>
+    <string name="err_load">エラー！HTTP取得に失敗しました</string>
+    <string name="err_io">エラー！IOエラー。Auth認証失敗？</string>
+    <string name="err_json">エラー！JSONに問題があります</string>
+    <string name="err_no_metadata">エラー！メタデータがありません。先に再読み込みしてください。</string>
+    <string name="err_timeout">エラー！タイムアウトしました。サーバが落ちてないか、ポートが開放されてるか確認してください。</string>
+
+</resources>

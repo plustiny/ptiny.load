@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>About it</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: sans-serif;
+      background: #ffffff;
+      color: #111111;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #111111;
+        color: #f0f0f0;
+      }
+    }
+    pre{
+      white-space:pre-wrap;
+      font-family:monospace;
+      border:1px solid #ddd;
+      padding:8px;
+      margin:8px 0;
+    }
+  </style>
+</head>
+
+<body>
+<!-- <details data-file="other.txt"> -->
+<!--   <summary>ファイルを開く</summary> -->
+<!--   <div><pre></pre></div> -->
+<!-- </details> -->
+<h1># ptiny.load</h1>
+
+<h2>Overview</h2>
+<p>A simple, lightweight server-side downloader inspired by pyLoad.<br></p>
+
+<h2>Source Code</h2>
+<p>Server(linux)<br>
+<a href="https://github.com/plustiny/ptinyloadd.git">https://github.com/plustiny/ptinyloadd.git</a><br>
+Client(Android)<br>
+<a href="https://github.com/plustiny/ptiny.load.git">https://github.com/plustiny/ptiny.load.git</a><br></p>
+
+<h2>Installation</h2>
+<h3>Server (Linux)</h3>
+
+<p><pre><code>
+sudo apt install libmicrohttpd-dev libjansson-dev zlib1g-dev
+
+git clone  https://github.com/plustiny/ptinyloadd.git
+cd ptinyloadd
+vi ptinyloadd.conf # change PORT, NAME, PASSWD
+make
+sudo make install
+
+sudo ln -s /etc/letsencrypt/live/(YOUR_SERVER)/privkey.pem /usr/local/etc/ptinyloadd/privkey.pem
+sudo ln -s /etc/letsencrypt/live/(YOUR_SERVER)/fullchain.pem /usr/local/etc/ptinyloadd/fullchain.pem
+sudo make service
+</code></pre></p>
+
+<h3>Client (Android)</h3>
+
+<p><pre><code>
+git clone  https://github.com/plustiny/ptiny.load.git
+cd ptiny.load
+./gradlew build
+adb install app/build/outputs/apk/debug/app-debug.apk
+</code></pre></p>
+
+<h2>Usage</h2>
+<p>Send a URL to the app on Android, and it will download it.<br></p>
+
+<h2>Donate</h2>
+<p>If you'd like to support this project, 
+please use my <a href="https://iherb.com/">iHerb</a> Rewards Code at checkout.
+Rewards Code: <strong>GEM796</strong></p>
+
+<p>If you’d like to support this project, please send Bitcoin to:
+<code>bitcoin:bc1qjjlzy93cmfxpswg2mrzf84v87wchpaagk54nqm</code></p>
+<img src="./donate.png" >
+
+<script>
+document.querySelectorAll('details[data-file]').forEach(d=>{
+  const file = d.dataset.file;
+  const pre = d.querySelector('pre');
+  let loaded = false;
+  d.addEventListener('toggle', async ()=>{
+    if(!d.open || loaded) return;
+    pre.textContent = 'now loading…';
+    try{
+      const res = await fetch(file);
+      if(!res.ok) throw new Error(res.status + ' ' + res.statusText);
+      pre.textContent = await res.text();
+      loaded = true;
+    }catch(e){
+      pre.textContent = 'loading failed.';
+    }
+  });
+});
+</script>
+
+</body>
+</html>
+`
