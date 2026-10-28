@@ -1,0 +1,10 @@
+ptiny.load is a lightweight Android client for ptinyloadd, a server-side downloader inspired by pyLoad.
+Send a URL from your Android device to a Linux server, and let ptinyloadd handle the download.
+Requires a separately installed and configured ptinyloadd server.
+
+Source Code:
+Server(linux)
+https://github.com/plustiny/ptinyloadd.git
+Client(Android: This)
+https://github.com/plustiny/ptiny.load.git
+

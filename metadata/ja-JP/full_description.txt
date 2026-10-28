@@ -1,0 +1,11 @@
+pyLoad に着想を得た、シンプルで軽量なサーバーサイドダウンローダーです。
+Android のアプリに URL を送ると、ダウンロードされます。
+ptinyloadd serverが別に必要です。
+
+ソースコード：
+Server(linux)
+https://github.com/plustiny/ptinyloadd.git
+Client(Android: This)
+https://github.com/plustiny/ptiny.load.git
+
+
