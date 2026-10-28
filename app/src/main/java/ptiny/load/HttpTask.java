@@ -9,16 +9,17 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.ConnectException; 
 import java.net.SocketTimeoutException;
+import java.util.ArrayList;
 
 abstract class HttpTask implements Runnable {
     protected String toStr(Object... objs){
-        StringBuilder sb = new StringBuilder();
+        ArrayList<String> strs = new ArrayList<>();
         for(Object o : objs){
             if( o != null){
-                sb.append(o.toString());
+                strs.add(o.toString());
             }
         }
-        return sb.toString();
+        return String.join(" ",strs);
     }
 
     protected void handleException(Exception e){

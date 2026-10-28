@@ -19,6 +19,7 @@ class CancelTask extends HttpTask {
             main.refreshTask.show();
             Response res = http.queryCancel(id, status);
             String s = main.jobStatusFrom(status);
+            if( s == "all") s = null;
             String msg = String.format("Cancel %s > %s", toStr(s,id), res.getStatus());
             new InfoTask(main, msg).show();
             main.reloadTask.run();

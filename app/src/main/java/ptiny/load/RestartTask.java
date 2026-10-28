@@ -19,6 +19,7 @@ class RestartTask extends HttpTask {
             main.refreshTask.show();
             Response ret = http.queryRestart(id, status);
             String s = main.jobStatusFrom(status);
+            if( s == "all") s = null;
             String msg = String.format("Restart %s > %s", toStr(s,id), ret.getStatus());
             new InfoTask(main, msg).show();
             main.reloadTask.run();

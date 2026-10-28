@@ -20,6 +20,7 @@ class DeleteTask extends HttpTask {
             main.refreshTask.show();
             Response ret = http.queryDelete(id, status);
             String s = main.jobStatusFrom(status);
+            if( s == "all") s = null;
             String msg = String.format("Delete %s > %s", toStr(s,id), ret.getStatus());
             new InfoTask(main, msg).show();
             main.reloadTask.run();
