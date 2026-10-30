@@ -1,0 +1,38 @@
+Categories:
+  - Download
+  - Internet
+License: MIT
+
+AuthorName: plustiny
+SourceCode: https://github.com/plustiny/ptiny.load
+IssueTracker: https://github.com/plustiny/ptiny.load/issues
+Bitcoin: bc1qjjlzy93cmfxpswg2mrzf84v87wchpaagk54nqm
+
+Summary: Send download URLs to a ptinyloadd server
+Description:
+  ptiny.load is an Android client for ptinyloadd,
+  a lightweight server-side downloader inspired by pyLoad.
+
+  Send a URL from your Android device to a Linux server
+  and let ptinyloadd handle the download.
+
+  A separately installed and configured ptinyloadd server
+  is required.
+
+  Server(linux)
+  https://github.com/plustiny/ptinyloadd.git
+  Client(Android)
+  https://github.com/plustiny/ptiny.load.git
+
+RepoType: git
+Repo: https://github.com/plustiny/ptiny.load.git
+
+Builds:
+  - versionName: '1.1'
+    versionCode: 1
+    commit: 33e5488c1449f69ed19ca41a829553b29a3cf855
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags

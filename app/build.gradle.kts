@@ -2,6 +2,7 @@ plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.compose.compiler)
   alias(libs.plugins.kotlin.serialization)
+  checkstyle
 }
 
 android {
@@ -48,4 +49,18 @@ dependencies {
   implementation("com.google.android.material:material:1.9.0")
   implementation("androidx.constraintlayout:constraintlayout:2.1.4")
   implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+}
+
+checkstyle {
+    toolVersion = "10.24.0"
+}
+
+tasks.register<org.gradle.api.plugins.quality.Checkstyle>("checkImport") {
+    configFile = rootProject.file("config/checkstyle/unusedimport.xml")
+
+    source = fileTree("src/main/java") {
+        include("**/*.java")
+    }
+
+    classpath = files()
 }

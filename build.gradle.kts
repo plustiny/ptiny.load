@@ -20,3 +20,10 @@ subprojects {
   }
 }
 
+tasks.register<Exec>("gitupload") {
+    group = "git"
+    description = "Clean, commit and push"
+    dependsOn(":app:clean")
+    commandLine("bash","-c",
+        "git add . && git commit -m `date -Is` && git push -u origin main")
+}
